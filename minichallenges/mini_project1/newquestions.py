@@ -29,7 +29,7 @@ def question2():
 def question3():
     while True:
         print("\nChoose a console")
-        answer3 = input("\nA. Switch \nB. PlayStation \nC. Xbox \nD. SuperComputer \nE. I'm not sure\n>").capitalize()
+        answer3 = input("\nA. Nintendo Switch \nB. PlayStation 5 \nC. Xbox Series X \nD. SuperComputer \nE. I'm not sure\n>").capitalize()
         if answer3 == "A" or answer3 == "B" or answer3 == "C" or answer3 == "D" or answer3 == "E":
             return answer3
             break
@@ -51,7 +51,7 @@ def question4():
 def question5():
     while True:
         print("\nChoose a snack")
-        answer5 = input("\nA. Hot Cheetos \nB. Popcorn \nC. Mixed Nuts \nD. Seaweed \nE. I'm not sure\n>").capitalize()
+        answer5 = input("\nA. Apple \nB. Popcorn \nC. Mixed Nuts \nD. Seaweed \nE. I'm not sure\n>").capitalize()
         if answer5 == "A" or answer5 == "B" or answer5 == "C" or answer5 == "D" or answer5 == "E":
             return answer5
             break
@@ -99,7 +99,7 @@ def questionaction():
 
     return results
 def main():
-    print("\n")
+    print()    
 
 main()
 

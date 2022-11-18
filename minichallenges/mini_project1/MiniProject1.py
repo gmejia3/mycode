@@ -54,7 +54,7 @@ def main():
     # results reveal 
     os.system('clear')
     
-    print("\nThank you for giving up so much of your time")
+    print("Congrats! You survived the quiz!")
     time.sleep(1)
     #os.system('clear')
     print("\nPlease wait while we calculate your results.")
@@ -63,11 +63,11 @@ def main():
     os.system('clear')
     print("Drum Roll please\n\n")
     time.sleep(2)
-    print(f"your favorite chicken nugget shape is! \n\n-------------->{what[0]}<--------------\n\n")
+    print(f"your favorite chicken nugget shape is! \n\n-------------->   {what[0]}   <--------------\n\n")
     time.sleep(2)
     print("More Drums please\n\n")
     time.sleep(2)
-    print(f"Your personality is! \n\n-------------->{what[1]}<---------------\n\n\n\n\n")
+    print(f"Your personality is! \n\n-------------->   {what[1]}   <---------------\n\n\n\n\n")
     time.sleep(2)
     print("Thank you for giving us your precious time!\n\n\n\n\n")  
 
