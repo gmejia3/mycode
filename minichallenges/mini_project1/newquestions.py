@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import re
 import statistics
 
 def question1():
@@ -101,7 +100,6 @@ def questionaction():
 def main():
     print()    
 
-main()
 
 
 if __name__ ==" __main__":

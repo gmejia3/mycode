@@ -37,14 +37,15 @@ def process_answer(quiz_answer):
 
 def main():
 
+    os.system('clear')
     print("Watch Us Guess Your Dino Buddy Shape And Reveal Your Personality!")
-    time.sleep(1)  #Pause for dramaticness
-    os.system('clear') #Clear Screen?
+    time.sleep(2)  #Pause for dramaticness
+    os.system('clear') #Clear Screen
     
     # Quiz directions  
-    print("We will ask you a series of questions. \n Please respond with a-e.")
+    print("We will ask you a series of questions. \nPlease respond with a-e.")
 
-    newquestions.questionaction()
+    
     final_answer = newquestions.questionaction()
     process_answer(final_answer)
     what = process_answer(final_answer) 
@@ -63,12 +64,22 @@ def main():
     os.system('clear')
     print("Drum Roll please\n\n")
     time.sleep(2)
-    print(f"your favorite chicken nugget shape is! \n\n-------------->   {what[0]}   <--------------\n\n")
-    time.sleep(2)
-    print("More Drums please\n\n")
-    time.sleep(2)
-    print(f"Your personality is! \n\n-------------->   {what[1]}   <---------------\n\n\n\n\n")
-    time.sleep(2)
-    print("Thank you for giving us your precious time!\n\n\n\n\n")  
+    print(f"your favorite chicken nugget shape is! \n\n\n\n")
+    os.system('figlet ' + what[0])
 
-main()
+    time.sleep(2)
+    print("\n\nMore Drums please\n\n")
+    time.sleep(2)
+    print(f"Your personality is! \n\n\n\n")
+    os.system('figlet ' + what[1])
+    time.sleep(2)
+    print("\n\nThank you for giving us your precious time!\n\n\n\n\n")  
+    
+
+
+#main()
+
+
+if __name__ == "__main__":
+    main()
+
