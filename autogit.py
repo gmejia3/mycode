@@ -9,7 +9,8 @@ try:
 
     os.chdir("/home/student/mycode")
 
-    cmds = ["git add *",
+    cmds = ["cd ~/mycode",
+            "git add *",
             "x",
             "git push"]
 
