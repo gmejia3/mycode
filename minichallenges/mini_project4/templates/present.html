@@ -10,15 +10,15 @@
         
       <h1>Please add a new mistake to the treasure trove of knowledge :)</h1>
   
-      <form action = "/success/<name>" method = "POST">
+      <form action = "/present" method = "POST">
 
       <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Mistake Name</label>
-  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  <input type="text" class="form-control" name="mistake_name">
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Lessons Learned</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <textarea type="text" class="form-control" name="mistake_description" rows="3"></textarea>
 </div>
         <p><input type = "submit" value = "submit"></p>
 </form>

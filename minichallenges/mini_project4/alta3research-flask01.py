@@ -29,34 +29,21 @@ coding_mistakes= [{
 @app.route("/success/<name>")
 @limiter.limit("10 per day")
 def success(name):
-    #if "past" in request.form:
-#    if request.form.get('past') == 'Past':
-#        return render_template("past.html")
-    #    return redirect(url_for("past"))
-    #elif "present" in request.form:
-#    elif request.form.get('present') == 'Present':
-#        return render_template("present.html")
-    #    return redirect(url_for("present"))
     return render_template("success.html", name = name)
-
-#def options():
-  #  if request.form.get('past') == 'Past':
-  #      return redirect(url_for("past"))
-  #  elif request.form.get('present') == 'Present':
-  #      return redirect(url_for("present"))
 
 @app.route("/past")
 def past():
     return jsonify(coding_mistakes)
     #return render_template("past.html")
 
-@app.route("/present")
+@app.route("/present", methods = ["POST"])
 def present():
+    if request.method == "POST":
+        pass    
     return render_template("present.html")
 
-# This is the starting point for the users. Either / or /start.
+# This is the starting point for the users.
 @app.route("/") 
-@app.route("/start") 
 @limiter.limit("5 per day")
 def start():
     return render_template("postmaker.html") 
@@ -68,20 +55,15 @@ def login():
         if request.form.get("nm"): 
             user = request.form.get("nm") 
         else: 
-            user = "defaultuser"
+            user = "I am too good to put in a name"
     
     elif request.method == "GET":
         if request.args.get("nm"): 
             user = request.args.get("nm") 
         else:
             #if no username is submitted.
-            user = "defaultuser" 
+            user = "I am too good to put in a name" 
     return redirect(url_for("success", name = user)) # pass back to /success with val for name
-
-
-
-
-
 
 
 if __name__ == "__main__":
