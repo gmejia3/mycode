@@ -4,7 +4,8 @@ import requests
 import json
 from pprint import pprint
 
-URL = "http://127.0.0.1:2224/"
+#URL = "http://127.0.0.1:2224/"
+URL = "https://aux1-3ad56d70-b523-46d0-93d7-fabc0204e67a.live.alta3.com/testing"
 
 
 
@@ -15,7 +16,8 @@ new_issue= [{
 
 new_issue = json.dumps(new_issue)
 
-resp = requests.post(URL, json = new_issue)
+resp = requests.get(URL).json()
+print(resp)
 
 
 

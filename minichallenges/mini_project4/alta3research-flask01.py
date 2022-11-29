@@ -31,16 +31,26 @@ coding_mistakes= [{
 def success(name):
     return render_template("success.html", name = name)
 
+@app.route("/testing")
+def testing():
+    return jsonify(coding_mistakes)
+
 @app.route("/past")
 def past():
-    return jsonify(coding_mistakes)
-    #return render_template("past.html")
+    return render_template("past.html", dictionary = coding_mistakes)
 
-@app.route("/present", methods = ["POST"])
+@app.route("/present", methods = ["POST", "GET"])
 def present():
     if request.method == "POST":
-        pass    
-    return render_template("present.html")
+        if request.form.get('mistake_name'):
+            mistake_name = request.form['mistake_name']              #Mistake Name
+            coding_mistakes.append(mistake_name)
+        if request.form.get('mistake_description'):
+            mistake_description = request.form['mistake_description']    #Mistake Description
+            coding_mistakes.append(mistake_description)
+            return render_template("past.html") # pass back to /success with val for name
+    elif request.method == "GET":
+        return render_template("present.html")
 
 # This is the starting point for the users.
 @app.route("/") 
